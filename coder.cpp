@@ -37,6 +37,7 @@ int main(int argc, char** argv) {
         image_data[written_bytes * 4 + 3] |= (0b00000011u & (input_buffer >> 6u));
         written_bytes++;
     }
+    text.close();
     if (written_bytes >= total_bytes) {
         std::cerr << "Written only " << written_bytes << ", buffer limit extended. Saving" << std::endl;
     }
