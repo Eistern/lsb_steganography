@@ -3,4 +3,4 @@ project(lsb_steganography)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(lsb_steganography main.cpp)
+add_executable(coder coder.cpp lodepng/lodepng.cpp lodepng/lodepng.h)
