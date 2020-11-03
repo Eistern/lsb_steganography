@@ -49,6 +49,8 @@ int main(int argc, char** argv) {
     text.close();
     if (written_bytes >= total_bytes) {
         std::cerr << "Written only " << written_bytes << ", buffer limit extended. Saving" << std::endl;
+    } else {
+        std::cout << "Written " << written_bytes << "/" << total_bytes << " bytes. Container filled: " << (double) written_bytes / total_bytes * 100 << "% Saving" << std::endl;
     }
 
     return_code = lodepng::encode("result.png", image_data, width, height);
